@@ -1,0 +1,49 @@
+// import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
+})
+export class ProductsComponent {
+  products: any[] = [
+    { 
+      id: 1,
+      name: 'Product 1',
+      description: 'Description of Product 1',
+      rating: 4.5,
+      imageUrl: 'https://example.com/product1.jpg',
+      gallery: [
+        'https://example.com/product1-img1.jpg',
+        'https://example.com/product1-img2.jpg',
+        'https://example.com/product1-img3.jpg'
+      ]
+    },
+    // Add more products here
+  ];
+
+  shareProduct(productUrl: string) {
+    // Implement sharing functionality for Whatsapp or Telegram
+    // Redirect user to Whatsapp or Telegram with the provided productUrl
+  }
+}
+
+<div *ngFor="let product of products">
+    <div>
+      <img [src]="product.imageUrl" alt="{{ product.name }}">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating }}</p>
+      <button (click)="shareProduct('whatsapp://send?text=' + product.name + ' - ' + productUrl)">Share on Whatsapp</button>
+      <button (click)="shareProduct('https://telegram.me/share/url?url=' + productUrl + '&text=' + product.name)">Share on Telegram</button>
+    </div>
+    
+    <!-- Optional: Product image gallery -->
+    <div *ngIf="product.gallery">
+      <h3>Product Image Gallery</h3>
+      <div *ngFor="let image of product.gallery">
+        <img [src]="image" alt="{{ product.name }} Image">
+      </div>
+    </div>
+  </div>
+  
