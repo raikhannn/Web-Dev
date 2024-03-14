@@ -1,0 +1,51 @@
+fieldset {
+    margin: 40px;
+    margin-bottom: 20px;
+    border:  4mm ridge rgba(247, 255, 96, 0.836);
+    background-color: #ffd7d7;
+  }
+  
+  input[type="txt"] {
+    width: 1000px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #706d6d;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  li {
+    border: 3px solid #ffbaba;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f6f4f4;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(141, 138, 138);
+  }
+  
+  li button {
+    margin-left: auto;
+  }
